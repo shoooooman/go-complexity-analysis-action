@@ -1,6 +1,0 @@
-runner:
-  govet:
-    cmd: go vet -vettool=$(which complexity) .
-    errorformat:
-      - "%f:%l: %m"
-    level: info
