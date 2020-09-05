@@ -1,0 +1,27 @@
+name: 'Check go func complexities with reviewdog'
+description: 'Measure and report complexities of functions with reviewdog'
+author: 'shoooooman'
+inputs:
+  cycloover:
+    description: 'show functions with the Cyclomatic complexity > N (default: 10)'
+    required: false
+    default: 10
+  maintunder:
+    description: 'show functions with the Maintainability index < N (default: 20)'
+    required: false
+    default: 20
+
+runs:
+  using: 'composite'
+  steps:
+    - run: go get github.com/shoooooman/go-complexity-analysis/cmd/complexity
+      shell: bash
+    - run: |
+      INSTALL_SHELL=https://raw.githubusercontent.com/reviewdog/reviewdog/master/install.sh
+      mkdir -p $HOME/bin && curl -sfL $INSTALL_SHELL| sh -s -- -b $HOME/bin
+      echo ::add-path::$HOME/bin
+      echo ::add-path::$(go env GOPATH)/bin # for Go projects
+      shell: bash
+    - run: |
+      reviewdog -reporter=github-pr-review -level=info
+      shell: bash
