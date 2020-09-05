@@ -2,6 +2,10 @@ name: 'Check go func complexities with reviewdog'
 description: 'Measure and report complexities of functions with reviewdog'
 author: 'shoooooman'
 inputs:
+  github_token:
+    description: 'GITHUB_TOKEN'
+    required: true
+    default: ${{ github.token }}
   cycloover:
     description: 'show functions with the Cyclomatic complexity > N (default: 10)'
     required: false
@@ -19,4 +23,6 @@ runs:
     - run: ${{ github.action_path }}/install.sh
       shell: bash
     - run: reviewdog -reporter=github-pr-review -level=info
+      env:
+        REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.github_token }}
       shell: bash
