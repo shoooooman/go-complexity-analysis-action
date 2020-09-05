@@ -22,7 +22,7 @@ runs:
       shell: bash
     - run: ${{ github.action_path }}/install.sh
       shell: bash
-    - run: reviewdog -reporter=github-pr-review -level=info
+    - run: ${{ github.action_path }}/reviewdog.sh
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.github_token }}
       shell: bash
