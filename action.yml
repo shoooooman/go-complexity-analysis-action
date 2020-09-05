@@ -1,5 +1,5 @@
 name: 'Check go func complexities with reviewdog'
-description: 'Measure and report complexities of functions with reviewdog'
+description: 'Measure and report complexities of golang functions with reviewdog'
 author: 'shoooooman'
 inputs:
   github_token:
@@ -25,5 +25,4 @@ runs:
     - run: ${{ github.action_path }}/reviewdog.sh
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.github_token }}
-        GITHUB_ACTION_PATH: ${{ github.action_path }}
       shell: bash
