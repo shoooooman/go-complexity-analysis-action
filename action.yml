@@ -16,7 +16,7 @@ runs:
   steps:
     - run: go get github.com/shoooooman/go-complexity-analysis/cmd/complexity
       shell: bash
-    - run: ${{ github.åction_path }}/install.sh
+    - run: ${{ github.action_path }}/install.sh
       shell: bash
     - run: reviewdog -reporter=github-pr-review -level=info
       shell: bash
