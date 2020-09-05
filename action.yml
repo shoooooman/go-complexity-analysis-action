@@ -25,4 +25,6 @@ runs:
     - run: ${{ github.action_path }}/reviewdog.sh
       env:
         REVIEWDOG_GITHUB_API_TOKEN: ${{ inputs.github_token }}
+        CYCLOOVER: ${{ inputs.cycloover }}
+        MAINTUNDER: ${{ inputs.maintunder }}
       shell: bash
