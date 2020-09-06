@@ -2,9 +2,9 @@
 
 This action runs [go-complexity-analysis](https://github.com/shoooooman/go-complexity-analysis) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to report complexities of golang functions in [Github Checks](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-status-checks).
 
-<img width="1111" alt="example1" src="https://user-images.githubusercontent.com/32924835/92326601-5462ba00-f08e-11ea-88d1-782c69330446.png">
-<img width="1409" alt="example2" src="https://user-images.githubusercontent.com/32924835/92326613-68a6b700-f08e-11ea-90da-cbe662cfb84d.png">
-<img width="1228" alt="example3" src="https://user-images.githubusercontent.com/32924835/92326616-6b091100-f08e-11ea-8898-0d74714713cb.png">
+<img width="875" alt="example1" src="https://user-images.githubusercontent.com/32924835/92326807-d7d0db00-f08f-11ea-940e-bdb9d6e81546.png">
+<img width="867" alt="example2" src="https://user-images.githubusercontent.com/32924835/92326810-dc958f00-f08f-11ea-9f85-90365a63e8a1.png">
+<img width="1023" alt="example3" src="https://user-images.githubusercontent.com/32924835/92326812-de5f5280-f08f-11ea-9185-70dc535a31e0.png">
 
 ## Inputs
 
