@@ -1,9 +1,11 @@
 #!/bin/sh -l
 
+cd $GITHUB_WORKSPACE/$INPUT_WORKDIR || exit 1
+
 REVIEWDOG_YML=$(cat << EOS
 runner:
   govet:
-    cmd: go vet -vettool=\$(which complexity) --cycloover=$INPUT_CYCLOOVER --maintunder=$INPUT_MAINTUNDER $INPUT_WORKDIR
+    cmd: go vet -vettool=\$(which complexity) --cycloover=$INPUT_CYCLOOVER --maintunder=$INPUT_MAINTUNDER ./...
     errorformat:
       - "%f:%l: %m"
     level: info
