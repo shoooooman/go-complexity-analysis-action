@@ -17,7 +17,7 @@ inputs:
   workdir:
     description: 'working directory relative to the root directory'
     required: false
-    default: ./...
+    default: ./
 
 runs:
   using: 'composite'
