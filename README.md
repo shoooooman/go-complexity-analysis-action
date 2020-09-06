@@ -1,6 +1,6 @@
 # go-complexity-analysis-action
 
-This action runs [go-complexity-analysis](https://github.com/shoooooman/go-complexity-analysis) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to show complexities of golang functions.
+This action runs [go-complexity-analysis](https://github.com/shoooooman/go-complexity-analysis) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to report complexities of golang functions in [Github Checks](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-status-checks).
 
 ## Inputs
 
