@@ -16,6 +16,11 @@ Optional The flag `--cycloover` of go-complexity-analysis to show only functions
 
 Optional The flag `--maintover` of go-complexity-analysis to show only functions with the Maintainability index < N (default: 20).
 
+### `workdir`
+
+Optional Working directory relative to the root directory.
+
+
 ## Example Usage
 ```yaml
 on: pull_request
@@ -31,4 +36,5 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         cycloover: 5
         maintunder: 30
+        workdir: subdirectory/
 ```
