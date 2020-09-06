@@ -15,5 +15,5 @@ echo "$REVIEWDOG_YML" > .reviewdog_complexity.yml
 export REVIEWDOG_GITHUB_API_TOKEN="$INPUT_GITHUB_TOKEN"
 
 echo "::group:: reviewdog: go vet -vettool=\$(which complexity) --cycloover=$INPUT_CYCLOOVER --maintunder=$INPUT_MAINTUNDER $INPUT_WORKDIR..."
-reviewdog -conf=./.reviewdog_complexity.yml -reporter=github-pr-check -level=info -filter-mode=nofilter
+reviewdog -conf=./.reviewdog_complexity.yml -reporter=github-pr-check -level=info -filter-mode=file
 echo '::endgroup::'
