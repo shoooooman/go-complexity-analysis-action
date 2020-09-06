@@ -7,7 +7,7 @@ runner:
   govet:
     cmd: go vet -vettool=\$(which complexity) --cycloover=$INPUT_CYCLOOVER --maintunder=$INPUT_MAINTUNDER ./...
     errorformat:
-      - "%f:%l: %m"
+      - "%f:%l:%c: %m"
 EOS
 )
 echo "$REVIEWDOG_YML" > .reviewdog_complexity.yml
