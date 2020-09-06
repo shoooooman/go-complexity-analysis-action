@@ -3,7 +3,7 @@
 REVIEWDOG_YML=$(cat << EOS
 runner:
   govet:
-    cmd: go vet -vettool=\$(which complexity) --cycloover=$CYCLOOVER --maintunder=$MAINTUNDER .
+    cmd: go vet -vettool=\$(which complexity) --cycloover=$CYCLOOVER --maintunder=$MAINTUNDER ./...
     errorformat:
       - "%f:%l: %m"
     level: info
