@@ -2,6 +2,10 @@
 
 This action runs [go-complexity-analysis](https://github.com/shoooooman/go-complexity-analysis) with [reviewdog](https://github.com/reviewdog/reviewdog) on pull requests to report complexities of golang functions in [Github Checks](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-status-checks).
 
+<img width="875" alt="example1" src="https://user-images.githubusercontent.com/32924835/92326807-d7d0db00-f08f-11ea-940e-bdb9d6e81546.png">
+<img width="867" alt="example2" src="https://user-images.githubusercontent.com/32924835/92326810-dc958f00-f08f-11ea-9f85-90365a63e8a1.png">
+<img width="1023" alt="example3" src="https://user-images.githubusercontent.com/32924835/92326812-de5f5280-f08f-11ea-9185-70dc535a31e0.png">
+
 ## Inputs
 
 ### `github_token`
