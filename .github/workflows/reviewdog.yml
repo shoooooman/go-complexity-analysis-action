@@ -1,0 +1,13 @@
+on: pull_request
+
+jobs:
+  complexity:
+    runs-on: ubuntu-latest
+    name: complexity reviewdog
+    steps:
+    - uses: actions/checkout@v2
+    - name: complexity
+      uses: ./
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        workdir: testdata/
