@@ -11,3 +11,15 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         workdir: testdata/
+  complexity-flags:
+    runs-on: ubuntu-latest
+    name: complexity reviewdog with flags
+    steps:
+    - uses: actions/checkout@v2
+    - name: complexity
+      uses: ./
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        workdir: testdata/
+        cycloover: 7
+        maintunder: 30
